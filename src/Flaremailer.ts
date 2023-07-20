@@ -7,7 +7,7 @@ export namespace Flaremailer {
    * @param logResponse Whether to log the response content
    * @returns Status of the request
    */
-  export async function send(body: MailBody, logResponse?: boolean) {
+  export async function send(body: Body, logResponse?: boolean) {
     try {
       let request = new Request(MAIL_CHANNELS_URI, {
         method: "POST",
@@ -34,38 +34,40 @@ export namespace Flaremailer {
 
 
   /** Describes the body of an email request */
-  export type MailBody = {
-    /** Personalizations of an email */
-    personalizations: MailPersonalization[];
+  export type Body = {
+    /** A list of personalizations for this email */
+    personalizations: Personalization[];
     /** The account that sent this email */
-    from: MailParticipant;
-    /** The subject of the email */
+    from: Participant;
+    /** The subject line of this email */
     subject: string;
-    /** Content of the email */
-    content: MailContent[];
+    /** A list of content of the email */
+    content: Content[];
   }
 
   /** Personalization of an email */
-  export type MailPersonalization = {
-    /** Recipients of the email */
-    to: MailParticipant[];
+  export type Personalization = {
+    /** Direct recipients of the email */
+    to: Participant[];
     /** Participants who are CC'd in to an email */
-    cc?: MailParticipant[];
+    cc?: Participant[];
     /** Participants who are BCC'd in to an email */
-    bcc?: MailParticipant[];
+    bcc?: Participant[];
   }
 
   /** A sender or receiver of an email */
-  export type MailParticipant = {
-    /** This recipient's email address */
+  export type Participant = {
+    /** This participant's email address */
     email: string;
-    /** This recipient's name */
+    /** This participant's name */
     name: string;
   }
 
   /** Content of an email */
-  export type MailContent = {
+  export type Content = {
+    /** The content type of this email */
     type: ContentType | string;
+    /** The content of this email */
     value: any;
   }
 

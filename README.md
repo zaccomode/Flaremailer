@@ -10,7 +10,7 @@ npm install flaremailer
 ```
 
 To send an email with Flaremailer, use the following code:
-```js
+```ts
 let response = await Flaremailer.send(
   {
     personalizations: [{
@@ -28,6 +28,9 @@ console.log(response);
 ```
 If the above code is successful, you should see `202` in your console. 
 From a code standpoint, that's all there is to it! Read on to find out how to configure your Worker and domain DNS settings for a seamless experience.
+
+## Type support
+For TypeScript users, this package include type safety for tested features! Check out the [types doc file for more information](types.md).
 
 
 ## Common Errors

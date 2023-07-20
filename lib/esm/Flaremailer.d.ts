@@ -5,37 +5,39 @@ export declare namespace Flaremailer {
      * @param logResponse Whether to log the response content
      * @returns Status of the request
      */
-    function send(body: MailBody, logResponse?: boolean): Promise<number>;
+    function send(body: Body, logResponse?: boolean): Promise<number>;
     /** Describes the body of an email request */
-    type MailBody = {
-        /** Personalizations of an email */
-        personalizations: MailPersonalization[];
+    type Body = {
+        /** A list of personalizations for this email */
+        personalizations: Personalization[];
         /** The account that sent this email */
-        from: MailParticipant;
-        /** The subject of the email */
+        from: Participant;
+        /** The subject line of this email */
         subject: string;
-        /** Content of the email */
-        content: MailContent[];
+        /** A list of content of the email */
+        content: Content[];
     };
     /** Personalization of an email */
-    type MailPersonalization = {
-        /** Recipients of the email */
-        to: MailParticipant[];
+    type Personalization = {
+        /** Direct recipients of the email */
+        to: Participant[];
         /** Participants who are CC'd in to an email */
-        cc?: MailParticipant[];
+        cc?: Participant[];
         /** Participants who are BCC'd in to an email */
-        bcc?: MailParticipant[];
+        bcc?: Participant[];
     };
     /** A sender or receiver of an email */
-    type MailParticipant = {
-        /** This recipient's email address */
+    type Participant = {
+        /** This participant's email address */
         email: string;
-        /** This recipient's name */
+        /** This participant's name */
         name: string;
     };
     /** Content of an email */
-    type MailContent = {
+    type Content = {
+        /** The content type of this email */
         type: ContentType | string;
+        /** The content of this email */
         value: any;
     };
     /** The type of content to be sent as part of an email */

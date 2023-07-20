@@ -1,13 +1,13 @@
 {
   "name": "flaremailer",
-  "description": "An unofficial package to make sending emails with Cloudflare Workers easier",
+  "description": "The unofficial package to make sending emails with Cloudflare Workers easier",
   "keywords": [
     "Cloudflare",
     "Workers"
   ],
   "author": "Isaac Shea",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "types": "src/index.d.ts",

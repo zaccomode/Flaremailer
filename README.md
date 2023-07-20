@@ -68,7 +68,7 @@ And that's it! Your emails should now be accepted by all mailbox providers.
 
 
 ## Spoofing Protection with Domain Lockdown
-MailChannels' Domain Lockdown feature (MailChannels being the organisation Cloudflare collaborated with to provide this service) uses the DNS to prove that you control the domains you want to send from via your Worker. The Domain Lockdown allows you to indicate a list of senders and accounts permitted to send emails from your domain. Any other accounts that attempt to send from your domain will be rejected with an error.
+MailChannels' Domain Lockdown feature uses the DNS to prove that you control the domains you want to send from via your Worker. The Domain Lockdown allows you to indicate a list of senders and accounts permitted to send emails from your domain. Any other accounts that attempt to send from your domain will be rejected with an error.
 
 **Currently, three lockdown identifiers are supported:**
 1. `auth` - This identifies a MailChannels customer, such as a web hosting provider, by specifying the authentication username of the customer. `auth` codes are a sequence of letters and numbers, such as `myhostingcompany`.

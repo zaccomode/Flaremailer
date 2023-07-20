@@ -4,6 +4,11 @@
 This package exists as an unofficial way to provide a type-safe API for the [Cloudflare Workers / MailChannels integration](https://blog.cloudflare.com/sending-email-from-workers-with-mailchannels/).
 
 ## Quick Start
+Install Flaremailer using:
+```bash
+npm install flaremailer
+```
+
 To send an email with Flaremailer, use the following code:
 ```js
 let response = await Flaremailer.send(

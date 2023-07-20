@@ -1,0 +1,26 @@
+{
+  "name": "flaremailer",
+  "description": "An unofficial package to make sending emails with Cloudflare Workers easier",
+  "keywords": [
+    "Cloudflare",
+    "Workers"
+  ],
+  "author": "Isaac Shea",
+  "license": "MIT",
+  "version": "1.0.0",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "types": "src/index.d.ts",
+  "files": [
+    "lib/",
+    "src/"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "prepublishOnly": "npm run tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}

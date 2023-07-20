@@ -8,7 +8,7 @@ This type encapsulates all information you can send through Flaremailer.
 - `content: Content[]` - A list of content for this email.
 This lists for both `personalizations` and `content`, should contain at most one item.
 
-#### Example
+### Example
 ```ts
 let body = { 
   personalizations: [{
@@ -31,7 +31,7 @@ A personalization describes lists of recipients.
 The participants defined in the `to` parameter will directly receive the email. There must be at least one direct receiver. Participants defined in the `cc` parameter will also receive the email, but will be visible in the CC section. Participants defined in the `bcc` parameter will receive the email, but will be defined in the BCC section and will therefore be invisible to everybody else.
 All three lists can have as many participants as you desire.
 
-#### Example
+### Example
 ```ts
 let personalization = {
   to: [
@@ -49,6 +49,13 @@ A participant is anybody who is involed in the email. They may be the one who se
 - `email: string` - This participant's email address.
 - `name: string` - This participant's name.
 
+### Example
+```ts
+let participant = { 
+  email: "recipient@example.com", name: "Test recipient",
+}
+```
+
 
 ## `Content`
 This describes the literal content of the email being sent. Currently, only plain and HTML text appears to be supported.
@@ -60,3 +67,11 @@ The `type` attribute can either take the `Flaremailer.ContentType` enumerator, o
 This enumerator defines all tested and compatible email content types:
 - `textPlain = "text/plain"` - Default, plain text
 - `textHtml = "text/html"` - Text that supports HTML syntax
+
+### Example
+```ts
+let example = { 
+  type: Flaremailer.ContentType.textPlain,
+  value: "Hello world!",
+}
+```

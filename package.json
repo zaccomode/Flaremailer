@@ -7,7 +7,7 @@
   ],
   "author": "Isaac Shea",
   "license": "MIT",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "types": "src/index.d.ts",
@@ -22,5 +22,10 @@
   },
   "devDependencies": {
     "typescript": "^5.1.6"
+  },
+  "repository": {
+    "url": "https://github.com/zaccomode/Flaremailer.git",
+    "type": "git",
+    "directory": ""
   }
 }

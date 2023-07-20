@@ -1,2 +1,2 @@
-export { Flaremail } from "./Flaremail";
+export { Flaremailer } from "./Flaremailer";
 //# sourceMappingURL=index.d.ts.map

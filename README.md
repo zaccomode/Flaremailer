@@ -10,7 +10,9 @@ npm install flaremailer
 ```
 
 To send an email with Flaremailer, use the following code:
-```ts
+```js
+import { Flaremailer } from "flaremailer";
+
 let response = await Flaremailer.send(
   {
     personalizations: [{

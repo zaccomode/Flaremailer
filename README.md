@@ -1,4 +1,7 @@
 # Flaremailer
+> **DEPRECATED:** MailChannels is no longer a secure and reliable way to send email using Cloudflare Workers. Consider using an alternative service such as Loops or Brevo.
+> See [this forum post](https://community.cloudflare.com/t/mailchannels-stopped-working-for-free-always-get-500-response-code/651600/4) for more information.
+
 > The unofficial package to make sending emails with Cloudflare Workers easier.
 
 This package exists as an unofficial way to provide a type-safe API for the [Cloudflare Workers / MailChannels integration](https://blog.cloudflare.com/sending-email-from-workers-with-mailchannels/).
